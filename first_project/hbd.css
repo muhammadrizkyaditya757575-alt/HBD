@@ -1,0 +1,336 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        hr{
+            border: none;
+            height: 32px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #770034, #30041f);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* SECTION 1: Memenuhi Layar Utama (100vh) */
+        .hero-section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Pembungkus Konten Kartu Atas */
+        .card-content {
+            width: 100%;
+            max-width: 900px;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        /* Bagian Foto Orang */
+        .photo-section {
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .person-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 12px;
+            filter: grayscale(80%) contrast(110%); 
+        }
+
+        /* Bagian Teks Utama */
+        .text-section {
+            width: 55%;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #f5e6e8;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-size: clamp(18px, 2.5vw, 24px);
+            font-weight: 400;
+        }
+
+        .date {
+            font-size: clamp(12px, 1.5vw, 16px);
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: clamp(13px, 1.8vw, 16px);
+            line-height: 1.6;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .calendar-section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent; /* Tanpa latar belakang */
+            padding: 20px;
+        }
+
+        .calendar-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar-container pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 4.5vw; /* Ukuran teks responsif otomatis untuk HP */
+            line-height: 1.4;
+            text-align: center;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .calendar-container .love {
+            color: #ff4d4d;
+            display: inline-block;
+        }
+
+        /* SECTION 2: Bagian Surat (Berada di Bawah Layar Utama) */
+        .letter-section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .letter-card {
+            background-color: #fcfbf4;
+            border-radius: 12px;
+            padding: 45px 40px;
+            width: 100%;
+            max-width: 750px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .letter-card h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 5vw, 3.8rem);
+            color: #800f2f;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .letter-card p {
+            line-height: 1.9;
+            font-size: 1.05rem;
+            color: #333333;
+            text-align: justify;
+            font-weight: 300;
+        }
+
+        .content-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            /* Layout Desktop: Horizontal */
+            flex-direction: row;
+            padding: 20px 0;
+        }
+        
+
+
+        .photo-frame {
+            width: 180px;
+            height: 180px;
+            aspect-ratio: 1 / 1;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Variasi Kemiringan Foto */
+        .photo-frame:nth-child(1) { transform: rotate(-6deg); }
+        .photo-frame:nth-child(2) { transform: rotate(4deg); }
+        .photo-frame:nth-child(3) { transform: rotate(-4deg); }
+        .photo-frame:nth-child(4) { transform: rotate(6deg); }
+
+        .photo-frame:hover {
+            transform: scale(1.08) rotate(0deg);
+            z-index: 10;
+        }
+
+        .heart-grid {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          gap: 8px; /* Jarak antar gambar */
+          width: 100%;
+          max-width: 600px; /* Lebar maksimal di Desktop */
+          aspect-ratio: 7 / 6; /* Menjaga proporsi di HP & Desktop */
+          margin: 0 auto;
+          padding-top: 200px;
+        }
+
+        /* Pengaturan Gambar Agar Tidak Gepeng */
+        .heart-grid img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Otomatis me-crop foto dengan rapi */
+        }
+
+        /* Pemetaan Posisi Sesuai Bentuk Hati (15 Kotak) */
+        .item-1  { grid-column: 1; grid-row: 2; }
+        .item-2  { grid-column: 1; grid-row: 3; }
+        .item-3  { grid-column: 2; grid-row: 1; }
+        .item-4  { grid-column: 3; grid-row: 1; }
+        .item-5  { grid-column: 2 / span 2; grid-row: 2 / span 2; } /* Kotak Besar Kiri */
+        .item-6  { grid-column: 4; grid-row: 2; }
+        .item-7  { grid-column: 4; grid-row: 3; }
+        .item-8  { grid-column: 5 / span 2; grid-row: 1 / span 2; } /* Kotak Besar Atas-Kanan */
+        .item-9  { grid-column: 5 / span 2; grid-row: 3 / span 2; } /* Kotak Besar Tengah-Kanan */
+        .item-10 { grid-column: 7; grid-row: 2; }
+        .item-11 { grid-column: 7; grid-row: 3; }
+        .item-12 { grid-column: 2; grid-row: 4; }
+        .item-13 { grid-column: 3 / span 2; grid-row: 4 / span 2; } /* Kotak Besar Bawah */
+        .item-14 { grid-column: 5; grid-row: 5; }
+        .item-15 { grid-column: 4; grid-row: 6; }
+
+        .akhir{
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            color: black;
+        }
+
+         .content-5 {
+            text-align: center;
+            padding: 40px 0 60px 0;
+            padding-top: 200px;
+        }
+
+        .love-text {
+            font-family: 'Poppins', sans-serif; /* Font dibikin nyaman dan mudah dibaca */
+            font-weight: 600;
+            font-size: 2rem;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Tampilan Mobile */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: auto;
+                min-height: 90vh;
+                padding: 40px 15px;
+            }
+
+            .card-content {
+                flex-direction: column;
+                padding: 25px 20px;
+                text-align: center;
+            }
+
+            .photo-section, .text-section {
+                width: 100%;
+            }
+
+            .text-section {
+                padding: 20px 0 0 0;
+            }
+
+            .btn-scroll {
+                align-self: center;
+            }
+
+            .scroll-hint {
+                display: none;
+            }
+
+            .letter-section {
+                padding: 40px 15px;
+            }
+
+            .letter-card {
+                padding: 30px 20px;
+            }
+
+            .letter-card p {
+                font-size: 0.95rem;
+            }
+
+            .content-3 {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .calendar-container pre {
+                font-size: 2.8vh; /* Ukuran pas di layar laptop/desktop */
+            }
+
+            .heart-grid {
+            gap: 4px; /* Mengecilkan jarak antar gambar di layar HP */
+          }
+
+          .content-4 {
+            gap: 30px;
+          }
+
+          .love-text {
+                font-size: 1.6rem;
+            }
+
+        }
